@@ -1,0 +1,51 @@
+Call to Action Section .cta-section {
+  padding: 80px 0;
+  background: white;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.cta-description {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #6c757d;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #a4b9cfe3 0%, #e0e457ea 100%);
+
+  color: white;
+  box-shadow: var(--shadow-light);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+  color: white;
+}

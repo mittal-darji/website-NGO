@@ -1,0 +1,123 @@
+/* contactus section */
+.contactus-main {
+  background-image: url("../../assets/homebanner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 350px;
+  padding: 60px 20px 30px 20px;
+  text-align: center;
+  position: relative;
+  color: #fff;
+}
+
+.contactus-main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.contactus-title,
+.contactus-subtitle {
+  position: relative;
+  z-index: 1;
+  color: #ccc;
+}
+
+.contactus-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 110px;
+}
+
+.contactus-subtitle {
+  font-size: 18px;
+  margin-top: -90px;
+}
+
+/* Contact form container */
+.contactus-cards {
+  height: 100vh;
+}
+
+.contactus-card-2 {
+  width: 100%;
+  max-width: 700px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  bottom: 2%;
+  top: -5%;
+  left: 25%;
+}
+
+.contact-us {
+  width: 100%;
+  padding: 10px;
+}
+
+.contact-us h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, #e74c3c 0%, #27ae60 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+/* Form fields horizontal layout */
+.contactus-form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.contactus-form-group label {
+  width: 30%;
+  font-weight: bold;
+  color: #fd8428b7;
+  font-size: 16px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.contactus-form-validation {
+  width: 70%;
+}
+
+.contactus-form-group input,
+.contactus-form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #fd8428b7;
+  border-radius: 5px;
+}
+
+/* Button */
+.contactus-btn {
+  display: block;
+  margin: 20px auto 0 auto;
+  width: 60%;
+  padding: 10px;
+  background: linear-gradient(135deg, #a4cfa4cb 0%, #fd8428b7 100%) !important;
+  color: #fff !important;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.contactus-btn:hover {
+  background: linear-gradient(135deg, #a4cfa8 0%, #fd8428e7 100%) !important;
+}

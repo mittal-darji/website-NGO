@@ -1,0 +1,765 @@
+/* About Organization Styles */
+.about-organization-page {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Common Section Styles */
+.president-section,
+.organaization-section,
+.education-minister-section,
+.general-secretary-section {
+  background-image: url("../../assets/ngo.jpg");
+
+  /* background: linear-gradient(135deg, #fd8428b7 0%, #764ba2 100%); */
+  padding: 120px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.president-section::before,
+.organaization-section::before,
+.education-minister-section::before,
+.general-secretary-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.president-overlay,
+.organaization-overlay,
+.education-minister-overlay,
+.general-secretary-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.president-title,
+.organaization-title,
+.education-minister-title,
+.general-secretary-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 3;
+}
+
+.president-subtitle,
+.organaization-subtitle,
+.education-minister-subtitle,
+.general-secretary-subtitle {
+  position: relative;
+  z-index: 3;
+}
+
+.president-subtitle h3,
+.organaization-subtitle h3,
+.education-minister-subtitle h3,
+.general-secretary-subtitle h3 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.position-title {
+  font-size: 1.3rem;
+  color: #f8f9fa;
+  font-weight: 400;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* Quote Section */
+.quote-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.quote-card {
+  background: #fff;
+  padding: 60px 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  border-left: 5px solid #fd8428b7;
+}
+
+.quote-icon {
+  font-size: 3rem;
+  color: #fd8428b7;
+  margin-bottom: 30px;
+}
+
+.quote-text {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #2c3e50;
+  font-style: italic;
+  line-height: 1.7;
+  margin: 0;
+  position: relative;
+}
+
+/* Profile Section */
+.profile-section {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.profile-card {
+  background: #f8f9fa;
+  padding: 60px 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+}
+
+.profile-image {
+  /* background-image: url("../../assets/pic.jpg"); */
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-image-placeholder {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, #a4b9cfcb 0%, #fd8428b7 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px;
+  border: 5px solid #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.img-praveen {
+  margin-top: 100%;
+}
+
+.profile-image-placeholder i {
+  font-size: 4rem;
+  color: #fff;
+}
+
+.profile-name {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.profile-title {
+  font-size: 1.2rem;
+  color: #fd8428b7;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #a4b9cfcb 0%, #fd8428b7 100%);
+  border-radius: 2px;
+}
+
+.profile-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Initiatives Section */
+.initiatives-section {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.initiatives-card {
+  background: #f8f9fa;
+  padding: 60px 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.initiatives-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 50px;
+  text-align: center;
+  position: relative;
+}
+
+.initiatives-title::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(135deg, #a4b9cfcb 0%, #fd8428b7 100%);
+  border-radius: 2px;
+}
+
+.initiative-item {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.initiative-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.initiative-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #a4b9cfcb 0%, #fd8428b7 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  font-size: 2.5rem;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.initiative-item h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.initiative-item p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Appeal Section */
+.appeal-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.appeal-card {
+  background: #fff;
+  padding: 60px 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-left: 5px solid #fd8428b7;
+}
+
+.appeal-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.appeal-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #a4b9cfcb 0%, #fd8428b7 100%);
+  border-radius: 2px;
+}
+
+.appeal-quote {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #2c3e50;
+  font-style: italic;
+  line-height: 1.7;
+  margin: 0;
+  position: relative;
+}
+
+/* Achievements Section */
+.achievements-section {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.achievements-card {
+  background: #f8f9fa;
+  padding: 60px 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.achievements-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.achievements-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(135deg, #a4b9cfcb 0%, #fd8428b7 100%);
+  border-radius: 2px;
+}
+
+.achievements-intro {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.achievement-item {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.achievement-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.achievement-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #a4b9cfcb 0%, #fd8428b7 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 2rem;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.achievement-item h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.achievement-item p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Philosophy Section */
+.philosophy-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.philosophy-card {
+  background: #fff;
+  padding: 60px 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-left: 5px solid #fd8428b7;
+}
+
+.philosophy-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.philosophy-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #a4b9cfcb 0%, #fd8428b7 100%);
+  border-radius: 2px;
+}
+
+.philosophy-quote {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #2c3e50;
+  font-style: italic;
+  line-height: 1.7;
+  margin: 0;
+  position: relative;
+}
+
+/* Vision Section */
+.about-vision-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.about-vision-card {
+  background: #fff;
+  padding: 60px 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-left: 5px solid #fd8428b7;
+}
+
+.about-vision-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.about-vision-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #a4b9cfcb 0%, #fd8428b7 100%);
+  border-radius: 2px;
+}
+
+.about-vision-quote {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #2c3e50;
+  font-style: italic;
+  line-height: 1.7;
+  margin: 0 0 30px 0;
+  position: relative;
+}
+
+.message-section {
+  text-align: left;
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 2px solid #f0f0f0;
+}
+
+.message-section h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.message-section p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+/* Message Section (for General Secretary) */
+.message-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.message-card {
+  background: #fff;
+  padding: 60px 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-left: 5px solid #fd8428b7;
+}
+
+.message-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.message-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #a4b9cfcb 0%, #fd8428b7 100%);
+  border-radius: 2px;
+}
+
+.message-content {
+  text-align: left;
+}
+
+.message-quote {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #2c3e50;
+  font-style: italic;
+  line-height: 1.7;
+  margin: 0 0 30px 0;
+  position: relative;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #fd8428b7;
+}
+
+/* Impact Section */
+.impact-section {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.impact-card {
+  background: #f8f9fa;
+  padding: 60px 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.impact-text {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.cards-section {
+  padding: 40px 0;
+  background-color: #f8f9fa; /* Light background for contrast */
+}
+
+.cards-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.card {
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-img-top {
+  height: 350px !important;
+  object-fit: cover;
+  width: 100%;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .president-title,
+  .organaization-title,
+  .education-minister-title,
+  .general-secretary-title {
+    font-size: 2.5rem;
+  }
+
+  .president-subtitle h3,
+  .organaization-subtitle h3,
+  .education-minister-subtitle h3,
+  .general-secretary-subtitle h3 {
+    font-size: 1.8rem;
+  }
+
+  .position-title {
+    font-size: 1.1rem;
+  }
+
+  .quote-text {
+    font-size: 1.4rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .initiatives-title,
+  .achievements-title {
+    font-size: 2rem;
+  }
+
+  .quote-card,
+  .profile-card,
+  .initiatives-card,
+  .appeal-card,
+  .achievements-card,
+  .philosophy-card,
+  .about-vision-card,
+  .message-card,
+  .impact-card {
+    padding: 40px 20px;
+  }
+
+  .profile-image,
+  .profile-image-placeholder {
+    width: 150px;
+    height: 150px;
+  }
+
+  .initiative-icon,
+  .achievement-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+  }
+
+  .initiative-item,
+  .achievement-item {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .president-section,
+  .organaization-section,
+  .education-minister-section,
+  .general-secretary-section {
+    padding: 80px 0 60px;
+  }
+
+  .quote-section,
+  .profile-section,
+  .initiatives-section,
+  .appeal-section,
+  .achievements-section,
+  .philosophy-section,
+  .about-vision-section,
+  .message-section,
+  .impact-section {
+    padding: 60px 0;
+  }
+
+  .president-title,
+  .organaization-title,
+  .education-minister-title,
+  .general-secretary-title {
+    font-size: 2rem;
+  }
+
+  .quote-text {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .initiatives-title,
+  .achievements-title {
+    font-size: 1.8rem;
+  }
+}
+
+.about-organization-page * {
+  transition: all 0.3s ease;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #a4b9cfcb 0%, #fd8428b7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gradient {
+  background: linear-gradient(135deg, #a4b9cfcb 0%, #fd8428b7 100%);
+}
+
+.shadow-custom {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.border-gradient {
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(135deg, #a4b9cfcb 0%, #fd8428b7 100%) border-box;
+}
