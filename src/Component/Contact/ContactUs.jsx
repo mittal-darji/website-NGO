@@ -10,7 +10,7 @@ function ContactUs() {
       <div>
         {/* Hero Section */}
 
-        <section className="founder-section"></section>
+        <section className="contactus-main"></section>
 
         {/* Contact Form Section */}
         <section className="contactus-section py-5">
