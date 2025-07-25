@@ -8,11 +8,8 @@ function ContactUs() {
     <>
       <Header />
       <div>
-        {/* Hero Section */}
-
         <section className="contactus-main"></section>
 
-        {/* Contact Form Section */}
         <section className="contactus-section py-5">
           <div className="container">
             <div className="row justify-content-center">
@@ -72,7 +69,6 @@ function ContactUs() {
                     </div>
                     <div className="text-center">
                       <button type="submit" className="btn contactus-btn  px-5">
-                        {/* <button type="submit" className="btn btn-primary"> */}
                         Send Message
                       </button>
                     </div>
