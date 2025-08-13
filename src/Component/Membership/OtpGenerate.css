@@ -1,0 +1,371 @@
+/* OtpGenerate Component Styles */
+
+.otpGenerate {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+.otpGenerate__container {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.otpGenerate__card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 40px 32px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: otpGenerate__slideUp 0.6s ease-out;
+}
+
+@keyframes otpGenerate__slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.otpGenerate__header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.otpGenerate__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 50%;
+  margin-bottom: 20px;
+  color: white;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.otpGenerate__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.5px;
+}
+
+.otpGenerate__cardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.otpGenerate__cardType {
+  font-size: 16px;
+  font-weight: 600;
+  color: #667eea;
+  background: rgba(102, 126, 234, 0.1);
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.otpGenerate__amount {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.otpGenerate__content {
+  text-align: center;
+}
+
+.otpGenerate__description {
+  font-size: 16px;
+  color: #4a5568;
+  line-height: 1.6;
+  margin: 0 0 32px 0;
+}
+
+.otpGenerate__sendStep,
+.otpGenerate__verifyStep {
+  animation: otpGenerate__fadeIn 0.4s ease-out;
+}
+
+@keyframes otpGenerate__fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.otpGenerate__inputGroup {
+  margin-bottom: 24px;
+}
+
+.otpGenerate__input {
+  width: 100%;
+  height: 56px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 4px;
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  background: #f7fafc;
+  color: #2d3748;
+  transition: all 0.3s ease;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.otpGenerate__input:focus {
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.otpGenerate__input::placeholder {
+  color: #a0aec0;
+  font-weight: 500;
+  letter-spacing: normal;
+}
+
+.otpGenerate__button {
+  min-height: 56px;
+  padding: 0 32px;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  min-width: 140px;
+}
+
+.otpGenerate__button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.otpGenerate__button--primary {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.otpGenerate__button--primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+}
+
+.otpGenerate__button--primary:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.otpGenerate__button--secondary {
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
+}
+
+.otpGenerate__button--secondary:hover:not(:disabled) {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.otpGenerate__buttonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.otpGenerate__spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: otpGenerate__spin 1s linear infinite;
+}
+
+@keyframes otpGenerate__spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.otpGenerate__message {
+  margin-top: 24px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+  animation: otpGenerate__slideDown 0.4s ease-out;
+}
+
+@keyframes otpGenerate__slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.otpGenerate__message--success {
+  background: rgba(72, 187, 120, 0.1);
+  color: #2f855a;
+  border: 1px solid rgba(72, 187, 120, 0.3);
+}
+
+.otpGenerate__message--error {
+  background: rgba(245, 101, 101, 0.1);
+  color: #c53030;
+  border: 1px solid rgba(245, 101, 101, 0.3);
+}
+
+.otpGenerate__message--warning {
+  background: rgba(237, 137, 54, 0.1);
+  color: #c05621;
+  border: 1px solid rgba(237, 137, 54, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .otpGenerate {
+    padding: 16px;
+  }
+
+  .otpGenerate__card {
+    padding: 32px 24px;
+    border-radius: 20px;
+  }
+
+  .otpGenerate__title {
+    font-size: 24px;
+  }
+
+  .otpGenerate__icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 16px;
+  }
+
+  .otpGenerate__icon svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .otpGenerate__input {
+    height: 52px;
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+
+  .otpGenerate__button {
+    min-height: 52px;
+    font-size: 15px;
+  }
+
+  .otpGenerate__description {
+    font-size: 15px;
+  }
+
+  .otpGenerate__amount {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .otpGenerate__card {
+    padding: 24px 20px;
+  }
+
+  .otpGenerate__buttonGroup {
+    gap: 12px;
+  }
+
+  .otpGenerate__input {
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .otpGenerate {
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  }
+
+  .otpGenerate__card {
+    background: rgba(26, 32, 44, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .otpGenerate__title,
+  .otpGenerate__amount {
+    color: #f7fafc;
+  }
+
+  .otpGenerate__description {
+    color: #cbd5e0;
+  }
+
+  .otpGenerate__input {
+    background: #2d3748;
+    border-color: #4a5568;
+    color: #f7fafc;
+  }
+
+  .otpGenerate__input:focus {
+    background: #4a5568;
+  }
+
+  .otpGenerate__input::placeholder {
+    color: #718096;
+  }
+}
+
+/* Focus visible for accessibility */
+.otpGenerate__button:focus-visible {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+.otpGenerate__input:focus-visible {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
