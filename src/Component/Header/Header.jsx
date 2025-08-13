@@ -13,10 +13,11 @@ function Header() {
   const closeAboutDropdown = () => {
     setIsAboutDropdownOpen(false);
   };
+
   return (
     <>
       {/* Top Bar */}
-      <div className="topbar py-2 px-3 d-flex justify-content-between align-items-center  text-white">
+      <div className="topbar py-2 px-3 d-flex justify-content-between align-items-center text-white">
         <div className="d-flex align-items-center gap-4 flex-wrap">
           <div>
             <i className="fas fa-phone-alt me-2"></i>Ph: +91 9707222000
@@ -44,7 +45,7 @@ function Header() {
         </div>
       </div>
       {/* Main Navbar */}
-      <nav className="navbar  bottom-nav navbar-expand-lg  shadow-sm">
+      <nav className="navbar bottom-nav navbar-expand-lg shadow-sm">
         <div className="container">
           <Link className="navbar-brand d-flex align-items-center" to="/">
             <img src={logo} alt="Logo" className="navbar-logo me-2" />
@@ -157,6 +158,21 @@ function Header() {
               <li className="nav-item">
                 <Link className="nav-link" to="/donate">
                   Donate
+                </Link>
+              </li>
+              {/* <li className="nav-item">
+                <Link
+                  className="nav-link btn btn-primary text-white px-3 py-2 rounded ms-2"
+                  to="/login"
+                >
+                  <i className="fas fa-sign-in-alt me-1"></i>
+                  Login
+                </Link>
+              </li> */}
+              <li className="nav-item">
+                <Link className="nav-link btn  rounded ms-2" to="/membership">
+                  <i className="fas fa-sign-in-alt me-1"></i>
+                  Membership
                 </Link>
               </li>
             </ul>

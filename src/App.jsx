@@ -14,6 +14,13 @@ import Achievements from "./Component/Achievements/Achievements";
 import Media from "./Component/Media/Media";
 import Kanyadaan from "./Component/KanyadaanPage/Kanyadaan";
 import Campaign from "./Component/Campaign/Campaign";
+import CardOptionsPage from "./Component/Membership/CardOptionsPage ";
+import MembershipForm from "./Component/Membership/MembershipForm";
+import MemberCard from "./Component/Membership/MemberCard";
+import PaymentPage from "./Component/Donation/PaymentPage";
+import OtpGenerate from "./Component/Membership/OtpGenerate";
+import SuccessPage from "./Component/SuccessPage/SuccessPage";
+// import Yellowcardfield from "./Component/Membership/yellowcardfield";
 
 function App() {
   return (
@@ -32,6 +39,13 @@ function App() {
         <Route path="/media" element={<Media />} />
         <Route path="/carddetail" element={<Carddetail />} />
         <Route path="/donate" element={<DonationGateway />} />
+        <Route path="/payment" element={<PaymentPage />} />
+        <Route path="/otpGenerate" element={<OtpGenerate />} />{" "}
+        <Route path="/successful" element={<SuccessPage />} />
+        <Route path="/membership" element={<CardOptionsPage />} />
+        <Route path="/membership/form" element={<MembershipForm />} />
+        <Route path="membercard" element={<MemberCard />} />
+        {/* <Route path="yellowcard" element={<Yellowcardfield />} /> */}
       </Routes>
     </div>
   );
