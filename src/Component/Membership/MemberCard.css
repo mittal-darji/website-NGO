@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.green-membercard-container {
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.green-membercard-display-container {
+  display: flex;
+  gap: 0px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+/* Base card styles */
+.green-membercard-front,
+.green-membercard-back {
+  width: 600px;
+  height: 450px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  font-family: "Arial", sans-serif;
+  margin: 15px;
+}
+
+/* FRONT CARD STYLES */
+.green-membercard-front {
+  background-image: url("../../assets/frontendsidecardgreen.png");
+  width: 700px;
+  height: 440px;
+}
+
+/* Main Content Area */
+.green-membercard-content {
+  display: flex;
+  padding: 15px 20px;
+  /* background-image: url("../../assets/frontendsidecardgreen.png"); */
+  height: 400px;
+  position: relative;
+}
+
+/* Photo Section */
+.green-membercard-photo-container {
+  width: 150px;
+  height: 190px;
+  margin-top: 125px;
+  border: 3px solid black;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.green-membercard-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.green-membercard-photo-placeholder {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  font-weight: bold;
+}
+
+.green-membercard-stamp-small {
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  width: 70px;
+  height: 70px;
+}
+
+.green-membercard-stamp-text-top,
+.green-membercard-stamp-text-bottom {
+  font-size: 8px;
+  font-weight: bold;
+  color: #1976d2;
+  line-height: 1;
+}
+
+.green-membercard-stamp-number {
+  font-size: 10px;
+  font-weight: bold;
+  color: #1976d2;
+  margin-top: 2px;
+}
+
+/* Details Section */
+.green-membercard-details-section {
+  flex: 1;
+  margin-top: 140px;
+  font-weight: 500;
+  padding-left: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.green-membercard-details {
+  flex: 1;
+}
+
+.green-membercard-detail-row {
+  display: flex;
+  margin-bottom: 8px;
+  align-items: flex-start;
+}
+
+.green-membercard-detail-label {
+  width: 80px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+  flex-shrink: 0;
+}
+
+.green-membercard-detail-separator {
+  margin: 0 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.green-membercard-detail-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  flex: 1;
+  word-break: break-word;
+}
+
+/* Download Button */
+.green-membercard-download-btn {
+  background: linear-gradient(45deg, #06923e, #347433);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* BACK SIDE STYLES - Updated with background image */
+.green-membercard-back {
+  background-image: url("../../assets/backsidecardgreen.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  width: 700px;
+  height: 440px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .green-membercard-display-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .green-membercard-content {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+
+  .green-membercard-photo-section {
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .green-membercard-details-section {
+    padding-left: 0;
+  }
+
+  .green-membercard-stamp-section {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .green-membercard-logos-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .green-membercard-logo-container {
+    flex: none;
+  }
+
+  .green-membercard-logo {
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  .green-membercard-main-logo-img {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .green-membercard-motto-banner {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .green-membercard-org-name {
+    font-size: 14px;
+  }
+
+  .green-membercard-org-subtitle {
+    font-size: 12px;
+  }
+}
+
+.green-membercard-section {
+  width: 100px;
+  position: relative;
+}
