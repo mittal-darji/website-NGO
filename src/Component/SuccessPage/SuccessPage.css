@@ -1,0 +1,49 @@
+.success-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.success-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.success-icon {
+  margin-bottom: 1.5rem;
+}
+
+.success-amount {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  color: #28a745;
+}
+
+.success-details {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.success-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* For loader in PaymentPage */
+.payment-loader {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
