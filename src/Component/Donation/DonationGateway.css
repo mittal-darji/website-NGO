@@ -148,44 +148,6 @@
   border-right: none;
 }
 
-/* Payment Method */
-.payment-method {
-  padding: 1rem;
-  border: 2px solid #e9ecef;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  height: 100%;
-}
-
-.payment-method:hover {
-  border-color: var(--primary-color);
-  box-shadow: 0 4px 8px rgba(31, 67, 106, 0.1);
-  transform: translateY(-2px);
-}
-
-.payment-method.selected {
-  border-color: var(--border-color);
-  background: var(--light-primary);
-  box-shadow: 0 4px 12px rgba(31, 67, 106, 0.15);
-}
-
-.payment-label {
-  font-weight: 600;
-  color: var(--border-color);
-  margin-bottom: 0.25rem;
-}
-
-.payment-subtitle {
-  font-size: 0.9rem;
-  color: var(--light-text);
-}
-
-.form-check-input:checked {
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
-}
-
 /* Tax Benefits */
 .tax-benefits {
   padding: 1.5rem;
@@ -380,7 +342,6 @@
 /* Focus States for Accessibility */
 .amount-btn:focus,
 .custom-input:focus,
-.payment-method:focus,
 .donate-btn:focus {
   outline: 2px solid var(--primary-color);
   outline-offset: 2px;
