@@ -38,7 +38,6 @@
 .orange-membercard-content {
   display: flex;
   padding: 15px 20px;
-  /* background-image: url("../../assets/frontendsidecardorange.png"); */
   height: 400px;
   position: relative;
 }

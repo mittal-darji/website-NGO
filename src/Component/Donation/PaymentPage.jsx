@@ -107,6 +107,8 @@
 // };
 
 // export default PaymentPage;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 import React from "react";
 import "./PaymentPage.css";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -116,7 +118,7 @@ const PaymentPage = () => {
   const amount = query.get("amount") || 0;
   const navigate = useNavigate();
 
-  const upiId = "mittaldarji290@okaxis"; //"q056757178@ybl";
+  const upiId = "q056757178@ybl";
   const paymentUrl = `upi://pay?pa=${upiId}&pn=NGO%20Donation&am=${amount}&cu=INR`;
   const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(
     paymentUrl
@@ -124,7 +126,7 @@ const PaymentPage = () => {
 
   const handlePaymentClick = () => {
     // Normally you would verify payment here before redirect
-    navigate("/successful");
+    navigate("/membership/form");
   };
 
   return (

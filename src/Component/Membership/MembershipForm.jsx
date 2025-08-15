@@ -3,6 +3,7 @@ import "./MembershipForm.css";
 import { Link, useNavigate } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import membershipApi from "../../API/membershipApi.js"; // Import the membership API
 
 const MembershipForm = () => {
   const navigate = useNavigate();
@@ -33,7 +34,6 @@ const MembershipForm = () => {
       languageToggle: "Language:",
       personalInfo: "Personal Information",
       uploadPhoto: "Upload Photo",
-      changePhoto: "Change Photo",
       fullName: "Full Name",
       position: "Position",
       dateOfBirth: "Date of Birth",
@@ -81,8 +81,7 @@ const MembershipForm = () => {
       pageSubtitle: "सदस्यता शुरू करने के लिए अपनी जानकारी भरें",
       languageToggle: "भाषा:",
       personalInfo: "व्यक्तिगत जानकारी",
-      uploadPhoto: "फोटो अपलोड करें",
-      changePhoto: "फोटो बदलें",
+      uploadPhoto: "फोटो बदलें",
       fullName: "पूरा नाम",
       position: "पद",
       dateOfBirth: "जन्म तिथि",
@@ -131,7 +130,6 @@ const MembershipForm = () => {
 
   const handleLanguageChange = (selectedLanguage) => {
     setLanguage(selectedLanguage);
-    // Clear errors when language changes
     setErrors({});
   };
 
@@ -141,7 +139,6 @@ const MembershipForm = () => {
       ...prev,
       [name]: value,
     }));
-    // Clear error when user starts typing
     if (errors[name]) {
       setErrors((prev) => ({
         ...prev,
@@ -163,7 +160,6 @@ const MembershipForm = () => {
 
   const validateForm = () => {
     const newErrors = {};
-
     if (!formData.name.trim()) newErrors.name = t.errors.nameRequired;
     if (!formData.position.trim())
       newErrors.position = t.errors.positionRequired;
@@ -174,7 +170,6 @@ const MembershipForm = () => {
       newErrors.bloodGroup = t.errors.bloodGroupRequired;
     if (!formData.cardType) newErrors.cardType = t.errors.cardTypeRequired;
 
-    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (formData.email && !emailRegex.test(formData.email)) {
       newErrors.email = t.errors.invalidEmail;
@@ -183,18 +178,35 @@ const MembershipForm = () => {
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
-
-  const handleCreateCard = (e) => {
+  const handleCreateCard = async (e) => {
     e.preventDefault();
     if (validateForm()) {
-      // Pass form data and profile image to member card page
-      navigate("/membercard", {
-        state: {
-          formData,
-          profileImage,
-          language,
-        },
-      });
+      try {
+        // Call the API to create membership
+        const response = await membershipApi.createMembership(formData);
+
+        // Convert cardType to lowercase for case-insensitive comparison
+        const cardType = formData.cardType.toLowerCase().trim();
+        let redirectPath = "/membercard"; // Default path
+
+        if (cardType === "yellow") {
+          redirectPath = "/yellowcard";
+        } else if (cardType === "orange") {
+          redirectPath = "/orangecard";
+        }
+
+        // Navigate to the appropriate card page with response data
+        navigate(redirectPath, {
+          state: {
+            formData: response.data,
+            profileImage,
+            language,
+          },
+        });
+      } catch (error) {
+        // Handle error (e.g., show a notification)
+        console.error(error.message);
+      }
     }
   };
 
@@ -271,7 +283,6 @@ const MembershipForm = () => {
                               d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"
                             ></path>
                           </svg>
-                          <span>{t.uploadPhoto}</span>
                         </div>
                       )}
                       <input
@@ -285,7 +296,7 @@ const MembershipForm = () => {
                         htmlFor="profileImage"
                         className="membershipf-image-label"
                       >
-                        {t.changePhoto}
+                        {t.uploadPhoto}
                       </label>
                     </div>
                   </div>

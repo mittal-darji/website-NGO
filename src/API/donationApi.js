@@ -1,15 +1,3 @@
-// src/api/paymentGatewayApi.js
-// import apiClient from "../API/apiClient.js";
-
-// export const createDonation = async (donationData) => {
-//   try {
-//     const response = await apiClient.post("/payment/", donationData);
-//     return response.data; // returns { success, message, data }
-//   } catch (error) {
-//     throw error.response?.data || { success: false, message: error.message };
-//   }
-// };
-
 // src/api/donationApi.js
 import apiClient from "./apiClient"; // Ensure this points to your Axios instance
 

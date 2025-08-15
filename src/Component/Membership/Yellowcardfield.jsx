@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Yellowcardfield.css";
 import html2canvas from "html2canvas";
@@ -69,9 +69,9 @@ const Yellowcardfield = () => {
                 <div className="yellow-membercard-content">
                   <div className="yellow-membercard-photo-section">
                     <div className="yellow-membercard-photo-container">
-                      {profileImage ? (
+                      {image ? (
                         <img
-                          src={profileImage}
+                          src={image}
                           alt="Member"
                           className="yellow-membercard-photo"
                         />
@@ -93,7 +93,7 @@ const Yellowcardfield = () => {
                           :
                         </span>
                         <span className="yellow-membercard-detail-value fs-6 fw-semibold">
-                          {formData.name}
+                          {data.name}
                         </span>
                       </div>
                       <div className="yellow-membercard-detail-row">
@@ -104,7 +104,7 @@ const Yellowcardfield = () => {
                           :
                         </span>
                         <span className="yellow-membercard-detail-value fs-6 fw-semibold">
-                          {formData.position}
+                          {data.position}
                         </span>
                       </div>
                       <div className="yellow-membercard-detail-row">
@@ -115,7 +115,7 @@ const Yellowcardfield = () => {
                           :
                         </span>
                         <span className="yellow-membercard-detail-value fs-6 fw-semibold">
-                          {formData.dateOfBirth}
+                          {data.dateOfBirth}
                         </span>
                       </div>
                       <div className="yellow-membercard-detail-row">
@@ -126,7 +126,7 @@ const Yellowcardfield = () => {
                           :
                         </span>
                         <span className="yellow-membercard-detail-value fs-6 fw-semibold">
-                          {formData.gender}
+                          {data.gender}
                         </span>
                       </div>
                       <div className="yellow-membercard-detail-row">
@@ -137,7 +137,7 @@ const Yellowcardfield = () => {
                           :
                         </span>
                         <span className="yellow-membercard-detail-value fs-6 fw-semibold">
-                          {formData.bloodGroup}
+                          {data.bloodGroup}
                         </span>
                       </div>
                       <div className="yellow-membercard-detail-row">
@@ -148,7 +148,7 @@ const Yellowcardfield = () => {
                           :
                         </span>
                         <span className="yellow-membercard-detail-value fs-6 fw-semibold">
-                          {formData.address}
+                          {data.address}
                         </span>
                       </div>
                       <div className="yellow-membercard-detail-row">
@@ -159,7 +159,7 @@ const Yellowcardfield = () => {
                           :
                         </span>
                         <span className="yellow-membercard-detail-value fs-6 fw-semibold">
-                          {formData.contact}
+                          {data.contact}
                         </span>
                       </div>
                     </div>

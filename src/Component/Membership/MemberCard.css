@@ -30,7 +30,7 @@
 /* FRONT CARD STYLES */
 .green-membercard-front {
   background-image: url("../../assets/frontendsidecardgreen.png");
-  width: 700px;
+  width: 735px;
   height: 440px;
 }
 
@@ -164,69 +164,364 @@
   height: 440px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .green-membercard-display-container {
-    flex-direction: column;
-    align-items: center;
+.green-membercard-section {
+  width: 100px;
+  position: relative;
+}
+
+/* Enhanced Responsive Design */
+
+/* Large screens (1200px and up) */
+@media (min-width: 1200px) {
+  .green-membercard-container {
+    padding: 40px;
+  }
+}
+
+/* Medium to large tablets (992px to 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .green-membercard-front,
+  .green-membercard-back {
+    width: 600px;
+    height: 380px;
+  }
+
+  .green-membercard-front {
+    width: 600px;
+    height: 380px;
+  }
+
+  .green-membercard-back {
+    width: 600px;
+    height: 380px;
   }
 
   .green-membercard-content {
-    flex-direction: column;
-    height: auto;
+    height: 340px;
+    padding: 12px 18px;
+  }
+
+  .green-membercard-photo-container {
+    width: 130px;
+    height: 160px;
+    margin-top: 110px;
+  }
+
+  .green-membercard-details-section {
+    margin-top: 120px;
+    padding-left: 20px;
+  }
+
+  .green-membercard-detail-value {
+    font-size: 14px;
+  }
+}
+
+/* Small to medium tablets (768px to 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+  .green-membercard-container {
     padding: 15px;
+  }
+
+  .green-membercard-display-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .green-membercard-front,
+  .green-membercard-back {
+    width: 500px;
+    height: 320px;
+    margin: 10px 0;
+  }
+
+  .green-membercard-front {
+    width: 500px;
+    height: 320px;
+  }
+
+  .green-membercard-back {
+    width: 500px;
+    height: 320px;
+  }
+
+  .green-membercard-content {
+    height: 280px;
+    padding: 10px 15px;
+  }
+
+  .green-membercard-photo-container {
+    width: 110px;
+    height: 140px;
+    margin-top: 90px;
+  }
+
+  .green-membercard-details-section {
+    margin-top: 100px;
+    padding-left: 15px;
+  }
+
+  .green-membercard-detail-label {
+    width: 70px;
+    font-size: 11px;
+  }
+
+  .green-membercard-detail-value {
+    font-size: 13px;
+  }
+
+  .green-membercard-detail-row {
+    margin-bottom: 6px;
+  }
+}
+
+/* Large mobile devices (481px to 767px) */
+@media (max-width: 767px) and (min-width: 481px) {
+  .green-membercard-container {
+    padding: 10px;
+  }
+
+  .green-membercard-display-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .green-membercard-front,
+  .green-membercard-back {
+    width: 95%;
+    max-width: 450px;
+    height: 280px;
+    margin: 8px 0;
+  }
+
+  .green-membercard-front {
+    width: 95%;
+    max-width: 450px;
+    height: 280px;
+  }
+
+  .green-membercard-back {
+    width: 95%;
+    max-width: 450px;
+    height: 280px;
+  }
+
+  .green-membercard-content {
+    height: 240px;
+    padding: 8px 12px;
+  }
+
+  .green-membercard-photo-container {
+    width: 90px;
+    height: 115px;
+    margin-top: 70px;
+    border: 2px solid black;
+  }
+
+  .green-membercard-details-section {
+    margin-top: 80px;
+    padding-left: 12px;
+  }
+
+  .green-membercard-detail-label {
+    width: 60px;
+    font-size: 10px;
+  }
+
+  .green-membercard-detail-value {
+    font-size: 12px;
+  }
+
+  .green-membercard-detail-row {
+    margin-bottom: 5px;
+  }
+
+  .green-membercard-download-btn {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+}
+
+/* Small mobile devices (320px to 480px) */
+@media (max-width: 480px) {
+  .green-membercard-container {
+    padding: 8px;
+  }
+
+  .green-membercard-display-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .green-membercard-front,
+  .green-membercard-back {
+    width: 95%;
+    max-width: 320px;
+    height: 240px;
+    margin: 5px 0;
+  }
+
+  .green-membercard-front {
+    width: 95%;
+    max-width: 320px;
+    height: 240px;
+  }
+
+  .green-membercard-back {
+    width: 95%;
+    max-width: 320px;
+    height: 240px;
+  }
+
+  .green-membercard-content {
+    height: 200px;
+    padding: 6px 10px;
+    flex-direction: column;
   }
 
   .green-membercard-photo-section {
     width: 100%;
-    margin-bottom: 15px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .green-membercard-photo-container {
+    width: 80px;
+    height: 100px;
+    margin-top: 20px;
+    border: 2px solid black;
   }
 
   .green-membercard-details-section {
+    flex: 1;
+    margin-top: 0;
     padding-left: 0;
-  }
-
-  .green-membercard-stamp-section {
     width: 100%;
-    margin-top: 15px;
   }
 
-  .green-membercard-logos-section {
-    flex-direction: column;
-    gap: 20px;
+  .green-membercard-details {
+    width: 100%;
   }
 
-  .green-membercard-logo-container {
-    flex: none;
+  .green-membercard-detail-row {
+    margin-bottom: 4px;
+    flex-wrap: wrap;
   }
 
-  .green-membercard-logo {
-    max-width: 80px;
-    max-height: 80px;
+  .green-membercard-detail-label {
+    width: 50px;
+    font-size: 9px;
   }
 
-  .green-membercard-main-logo-img {
-    max-width: 100px;
-    max-height: 100px;
+  .green-membercard-detail-separator {
+    margin: 0 4px;
   }
 
-  .green-membercard-motto-banner {
-    font-size: 14px;
+  .green-membercard-detail-value {
+    font-size: 11px;
+    flex: 1;
+    min-width: 100px;
+  }
+
+  .green-membercard-download-btn {
+    padding: 8px 20px;
+    font-size: 13px;
+    border-radius: 20px;
+  }
+
+  .green-membercard-stamp-small {
+    width: 50px;
+    height: 50px;
+    bottom: -5px;
+    left: -5px;
   }
 }
 
-@media (max-width: 480px) {
-  .green-membercard-org-name {
-    font-size: 14px;
+/* Extra small devices (less than 320px) */
+@media (max-width: 319px) {
+  .green-membercard-container {
+    padding: 5px;
   }
 
-  .green-membercard-org-subtitle {
+  .green-membercard-front,
+  .green-membercard-back {
+    width: 98%;
+    height: 200px;
+    margin: 3px 0;
+  }
+
+  .green-membercard-front {
+    width: 98%;
+    height: 200px;
+  }
+
+  .green-membercard-back {
+    width: 98%;
+    height: 200px;
+  }
+
+  .green-membercard-content {
+    height: 160px;
+    padding: 4px 8px;
+    flex-direction: column;
+  }
+
+  .green-membercard-photo-container {
+    width: 60px;
+    height: 80px;
+    margin-top: 10px;
+  }
+
+  .green-membercard-detail-label {
+    width: 40px;
+    font-size: 8px;
+  }
+
+  .green-membercard-detail-value {
+    font-size: 10px;
+  }
+
+  .green-membercard-download-btn {
+    padding: 6px 15px;
     font-size: 12px;
   }
 }
 
-.green-membercard-section {
-  width: 100px;
-  position: relative;
+/* Landscape orientation adjustments for mobile */
+@media (max-width: 767px) and (orientation: landscape) {
+  .green-membercard-front,
+  .green-membercard-back {
+    height: auto;
+    min-height: 200px;
+  }
+
+  .green-membercard-front {
+    height: auto;
+    min-height: 200px;
+  }
+
+  .green-membercard-back {
+    height: auto;
+    min-height: 200px;
+  }
+
+  .green-membercard-content {
+    height: auto;
+    min-height: 160px;
+    flex-direction: row;
+  }
+
+  .green-membercard-photo-container {
+    margin-top: 20px;
+  }
+
+  .green-membercard-details-section {
+    margin-top: 20px;
+    padding-left: 15px;
+  }
 }

@@ -44,18 +44,31 @@ const CardOptionsPage = () => {
     },
   ];
 
+  // const handleCardClick = (card) => {
+  //   setSelectedCard(card.id);
+
+  //   if (card.id === "green") {
+  //     // ✅ Green card → go to payment page
+  //     navigate(`/payment?amount=${card.amount}`);
+  //   } else {
+  //     // ✅ Yellow & Orange → go to /otpGenerate with card type in query
+  //     navigate(`/otpGenerate?cardType=${card.id}`);
+  //   }
+  // };
   const handleCardClick = (card) => {
     setSelectedCard(card.id);
-
     if (card.id === "green") {
-      // ✅ Green card → go to payment page
-      navigate(`/payment?amount=${card.amount}`);
+      // ✅ Green card → go to payment page with card title in the URL
+      navigate(
+        `/payment?amount=${card.amount}&cardTitle=${encodeURIComponent(
+          card.title
+        )}`
+      );
     } else {
       // ✅ Yellow & Orange → go to /otpGenerate with card type in query
       navigate(`/otpGenerate?cardType=${card.id}`);
     }
   };
-
   return (
     <>
       <Header />

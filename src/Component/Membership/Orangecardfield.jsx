@@ -69,9 +69,9 @@ const Orangecardfield = () => {
                 <div className="orange-membercard-content">
                   <div className="orange-membercard-photo-section">
                     <div className="orange-membercard-photo-container">
-                      {profileImage ? (
+                      {image ? (
                         <img
-                          src={profileImage}
+                          src={image}
                           alt="Member"
                           className="orange-membercard-photo"
                         />
@@ -92,8 +92,8 @@ const Orangecardfield = () => {
                         <span className="orange-membercard-detail-separator">
                           :
                         </span>
-                        <span className="orange-membercard-detail-value fs-6 fw-semibold ">
-                          {formData.name}
+                        <span className="orange-membercard-detail-value fs-6 fw-semibold">
+                          {data.name}
                         </span>
                       </div>
                       <div className="orange-membercard-detail-row">
@@ -104,7 +104,7 @@ const Orangecardfield = () => {
                           :
                         </span>
                         <span className="orange-membercard-detail-value fs-6 fw-semibold">
-                          {formData.position}
+                          {data.position}
                         </span>
                       </div>
                       <div className="orange-membercard-detail-row">
@@ -115,7 +115,7 @@ const Orangecardfield = () => {
                           :
                         </span>
                         <span className="orange-membercard-detail-value fs-6 fw-semibold">
-                          {formData.dateOfBirth}
+                          {data.dateOfBirth}
                         </span>
                       </div>
                       <div className="orange-membercard-detail-row">
@@ -126,7 +126,7 @@ const Orangecardfield = () => {
                           :
                         </span>
                         <span className="orange-membercard-detail-value fs-6 fw-semibold">
-                          {formData.gender}
+                          {data.gender}
                         </span>
                       </div>
                       <div className="orange-membercard-detail-row">
@@ -137,7 +137,7 @@ const Orangecardfield = () => {
                           :
                         </span>
                         <span className="orange-membercard-detail-value fs-6 fw-semibold">
-                          {formData.bloodGroup}
+                          {data.bloodGroup}
                         </span>
                       </div>
                       <div className="orange-membercard-detail-row">
@@ -148,7 +148,7 @@ const Orangecardfield = () => {
                           :
                         </span>
                         <span className="orange-membercard-detail-value fs-6 fw-semibold">
-                          {formData.address}
+                          {data.address}
                         </span>
                       </div>
                       <div className="orange-membercard-detail-row">
@@ -159,7 +159,7 @@ const Orangecardfield = () => {
                           :
                         </span>
                         <span className="orange-membercard-detail-value fs-6 fw-semibold">
-                          {formData.contact}
+                          {data.contact}
                         </span>
                       </div>
                     </div>
