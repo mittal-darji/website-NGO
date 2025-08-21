@@ -22,7 +22,7 @@ const OtpGenerate = () => {
 
   const getAmountFromCardType = (t) => {
     const key = normalize(t);
-    if (key === "yellow" || key === "yellow card") return 2100;
+    if (key === "yellow" || key === "yellow card") return 1;
     if (key === "orange" || key === "orange card") return 5100;
     return null; // unknown card
   };
